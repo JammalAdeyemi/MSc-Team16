@@ -1,0 +1,2300 @@
+2023-03-14 16:32:29,619:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-03-14 16:32:29,619:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-03-14 16:32:29,619:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-03-14 16:32:29,620:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-03-14 16:32:32,203:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-03-14 16:32:32,924:INFO:PyCaret ClassificationExperiment
+2023-03-14 16:32:32,924:INFO:Logging name: clf-default-name
+2023-03-14 16:32:32,924:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2023-03-14 16:32:32,924:INFO:version 3.0.0.rc9
+2023-03-14 16:32:32,924:INFO:Initializing setup()
+2023-03-14 16:32:32,924:INFO:self.USI: 00d3
+2023-03-14 16:32:32,924:INFO:self._variable_keys: {'exp_id', 'seed', 'data', 'fold_shuffle_param', 'X_test', 'n_jobs_param', 'html_param', 'y', 'USI', 'gpu_param', 'y_test', 'fix_imbalance', 'idx', 'target_param', 'memory', 'X', 'exp_name_log', '_ml_usecase', 'pipeline', 'fold_groups_param', 'fold_generator', 'log_plots_param', 'X_train', 'is_multiclass', 'logging_param', 'y_train', 'gpu_n_jobs_param', '_available_plots'}
+2023-03-14 16:32:32,924:INFO:Checking environment
+2023-03-14 16:32:32,934:INFO:python_version: 3.9.13
+2023-03-14 16:32:32,934:INFO:python_build: ('main', 'Aug 25 2022 23:51:50')
+2023-03-14 16:32:32,934:INFO:machine: AMD64
+2023-03-14 16:32:32,934:INFO:platform: Windows-10-10.0.22621-SP0
+2023-03-14 16:32:32,934:INFO:Memory: svmem(total=6387220480, available=438714368, percent=93.1, used=5948506112, free=438714368)
+2023-03-14 16:32:32,934:INFO:Physical Core: 4
+2023-03-14 16:32:32,934:INFO:Logical Core: 8
+2023-03-14 16:32:32,934:INFO:Checking libraries
+2023-03-14 16:32:32,934:INFO:System:
+2023-03-14 16:32:32,934:INFO:    python: 3.9.13 (main, Aug 25 2022, 23:51:50) [MSC v.1916 64 bit (AMD64)]
+2023-03-14 16:32:32,934:INFO:executable: C:\Users\oabas\anaconda3\python.exe
+2023-03-14 16:32:32,934:INFO:   machine: Windows-10-10.0.22621-SP0
+2023-03-14 16:32:32,934:INFO:PyCaret required dependencies:
+2023-03-14 16:32:32,936:INFO:                 pip: 22.2.2
+2023-03-14 16:32:32,936:INFO:          setuptools: 63.4.1
+2023-03-14 16:32:32,936:INFO:             pycaret: 3.0.0rc9
+2023-03-14 16:32:32,936:INFO:             IPython: 7.31.1
+2023-03-14 16:32:32,936:INFO:          ipywidgets: 7.6.5
+2023-03-14 16:32:32,937:INFO:                tqdm: 4.64.1
+2023-03-14 16:32:32,937:INFO:               numpy: 1.21.5
+2023-03-14 16:32:32,937:INFO:              pandas: 1.4.4
+2023-03-14 16:32:32,937:INFO:              jinja2: 2.11.3
+2023-03-14 16:32:32,937:INFO:               scipy: 1.9.1
+2023-03-14 16:32:32,938:INFO:              joblib: 1.2.0
+2023-03-14 16:32:32,938:INFO:             sklearn: 1.0.2
+2023-03-14 16:32:32,938:INFO:                pyod: 1.0.7
+2023-03-14 16:32:32,938:INFO:            imblearn: 0.10.1
+2023-03-14 16:32:32,938:INFO:   category_encoders: 2.6.0
+2023-03-14 16:32:32,939:INFO:            lightgbm: 3.3.5
+2023-03-14 16:32:32,939:INFO:               numba: 0.55.1
+2023-03-14 16:32:32,939:INFO:            requests: 2.28.1
+2023-03-14 16:32:32,939:INFO:          matplotlib: 3.5.2
+2023-03-14 16:32:32,940:INFO:          scikitplot: 0.3.7
+2023-03-14 16:32:32,940:INFO:         yellowbrick: 1.5
+2023-03-14 16:32:32,940:INFO:              plotly: 5.9.0
+2023-03-14 16:32:32,940:INFO:             kaleido: 0.2.1
+2023-03-14 16:32:32,940:INFO:         statsmodels: 0.13.2
+2023-03-14 16:32:32,941:INFO:              sktime: 0.16.1
+2023-03-14 16:32:32,941:INFO:               tbats: 1.1.2
+2023-03-14 16:32:32,941:INFO:            pmdarima: 2.0.2
+2023-03-14 16:32:32,941:INFO:              psutil: 5.9.0
+2023-03-14 16:32:32,941:INFO:PyCaret optional dependencies:
+2023-03-14 16:32:32,992:INFO:                shap: Not installed
+2023-03-14 16:32:32,993:INFO:           interpret: Not installed
+2023-03-14 16:32:32,993:INFO:                umap: Not installed
+2023-03-14 16:32:32,993:INFO:    pandas_profiling: Not installed
+2023-03-14 16:32:32,993:INFO:  explainerdashboard: Not installed
+2023-03-14 16:32:32,993:INFO:             autoviz: Not installed
+2023-03-14 16:32:32,993:INFO:           fairlearn: Not installed
+2023-03-14 16:32:32,993:INFO:             xgboost: 1.7.3
+2023-03-14 16:32:32,993:INFO:            catboost: Not installed
+2023-03-14 16:32:32,995:INFO:              kmodes: 0.12.2
+2023-03-14 16:32:32,995:INFO:             mlxtend: Not installed
+2023-03-14 16:32:32,995:INFO:       statsforecast: Not installed
+2023-03-14 16:32:32,995:INFO:        tune_sklearn: Not installed
+2023-03-14 16:32:32,995:INFO:                 ray: Not installed
+2023-03-14 16:32:32,995:INFO:            hyperopt: Not installed
+2023-03-14 16:32:32,995:INFO:              optuna: Not installed
+2023-03-14 16:32:32,995:INFO:               skopt: Not installed
+2023-03-14 16:32:32,996:INFO:              mlflow: Not installed
+2023-03-14 16:32:32,996:INFO:              gradio: Not installed
+2023-03-14 16:32:32,996:INFO:             fastapi: Not installed
+2023-03-14 16:32:32,996:INFO:             uvicorn: Not installed
+2023-03-14 16:32:32,996:INFO:              m2cgen: Not installed
+2023-03-14 16:32:32,996:INFO:           evidently: Not installed
+2023-03-14 16:32:32,996:INFO:               fugue: Not installed
+2023-03-14 16:32:32,996:INFO:           streamlit: Not installed
+2023-03-14 16:32:32,997:INFO:             prophet: Not installed
+2023-03-14 16:32:32,997:INFO:None
+2023-03-14 16:32:32,997:INFO:Set up data.
+2023-03-14 16:32:33,054:INFO:Set up train/test split.
+2023-03-14 16:32:33,123:INFO:Set up index.
+2023-03-14 16:32:33,133:INFO:Set up folding strategy.
+2023-03-14 16:32:33,133:INFO:Assigning column types.
+2023-03-14 16:32:33,163:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2023-03-14 16:32:33,273:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-03-14 16:32:33,280:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-03-14 16:32:33,343:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:33,490:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:33,583:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-03-14 16:32:33,583:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-03-14 16:32:33,638:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:33,642:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:33,643:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2023-03-14 16:32:33,723:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-03-14 16:32:33,764:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:33,773:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:33,863:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-03-14 16:32:33,923:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:33,928:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:33,928:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2023-03-14 16:32:34,073:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:34,083:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:34,223:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:34,223:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:34,239:INFO:Preparing preprocessing pipeline...
+2023-03-14 16:32:34,243:INFO:Set up simple imputation.
+2023-03-14 16:32:34,346:INFO:Finished creating preprocessing pipeline.
+2023-03-14 16:32:34,355:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\oabas\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['age', 'gender', 'height',
+                                             'weight', 'ap_hi', 'ap_lo',
+                                             'cholesterol', 'gluc', 'smoke',
+                                             'alco', 'active', 'BMI'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              missing_values=nan,
+                                                              strategy='mean',
+                                                              verbose=0))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent',
+                                                              verbose=0)))],
+         verbose=False)
+2023-03-14 16:32:34,355:INFO:Creating final display dataframe.
+2023-03-14 16:32:34,843:INFO:Setup _display_container:                     Description             Value
+0                    Session id              8536
+1                        Target            cardio
+2                   Target type            Binary
+3           Original data shape       (70000, 13)
+4        Transformed data shape       (70000, 13)
+5   Transformed train set shape       (49000, 13)
+6    Transformed test set shape       (21000, 13)
+7              Numeric features                12
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                -1
+15                      Use GPU             False
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              00d3
+2023-03-14 16:32:35,033:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:35,039:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:35,229:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:35,236:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:35,239:INFO:setup() successfully completed in 2.31s...............
+2023-03-14 16:32:35,254:INFO:PyCaret ClassificationExperiment
+2023-03-14 16:32:35,254:INFO:Logging name: clf-default-name
+2023-03-14 16:32:35,254:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2023-03-14 16:32:35,254:INFO:version 3.0.0.rc9
+2023-03-14 16:32:35,255:INFO:Initializing setup()
+2023-03-14 16:32:35,255:INFO:self.USI: 5763
+2023-03-14 16:32:35,255:INFO:self._variable_keys: {'exp_id', 'seed', 'data', 'fold_shuffle_param', 'X_test', 'n_jobs_param', 'html_param', 'y', 'USI', 'gpu_param', 'y_test', 'fix_imbalance', 'idx', 'target_param', 'memory', 'X', 'exp_name_log', '_ml_usecase', 'pipeline', 'fold_groups_param', 'fold_generator', 'log_plots_param', 'X_train', 'is_multiclass', 'logging_param', 'y_train', 'gpu_n_jobs_param', '_available_plots'}
+2023-03-14 16:32:35,255:INFO:Checking environment
+2023-03-14 16:32:35,255:INFO:python_version: 3.9.13
+2023-03-14 16:32:35,255:INFO:python_build: ('main', 'Aug 25 2022 23:51:50')
+2023-03-14 16:32:35,256:INFO:machine: AMD64
+2023-03-14 16:32:35,256:INFO:platform: Windows-10-10.0.22621-SP0
+2023-03-14 16:32:35,256:INFO:Memory: svmem(total=6387220480, available=406528000, percent=93.6, used=5980692480, free=406528000)
+2023-03-14 16:32:35,256:INFO:Physical Core: 4
+2023-03-14 16:32:35,256:INFO:Logical Core: 8
+2023-03-14 16:32:35,256:INFO:Checking libraries
+2023-03-14 16:32:35,257:INFO:System:
+2023-03-14 16:32:35,257:INFO:    python: 3.9.13 (main, Aug 25 2022, 23:51:50) [MSC v.1916 64 bit (AMD64)]
+2023-03-14 16:32:35,257:INFO:executable: C:\Users\oabas\anaconda3\python.exe
+2023-03-14 16:32:35,257:INFO:   machine: Windows-10-10.0.22621-SP0
+2023-03-14 16:32:35,257:INFO:PyCaret required dependencies:
+2023-03-14 16:32:35,257:INFO:                 pip: 22.2.2
+2023-03-14 16:32:35,257:INFO:          setuptools: 63.4.1
+2023-03-14 16:32:35,258:INFO:             pycaret: 3.0.0rc9
+2023-03-14 16:32:35,258:INFO:             IPython: 7.31.1
+2023-03-14 16:32:35,258:INFO:          ipywidgets: 7.6.5
+2023-03-14 16:32:35,258:INFO:                tqdm: 4.64.1
+2023-03-14 16:32:35,258:INFO:               numpy: 1.21.5
+2023-03-14 16:32:35,258:INFO:              pandas: 1.4.4
+2023-03-14 16:32:35,258:INFO:              jinja2: 2.11.3
+2023-03-14 16:32:35,258:INFO:               scipy: 1.9.1
+2023-03-14 16:32:35,258:INFO:              joblib: 1.2.0
+2023-03-14 16:32:35,258:INFO:             sklearn: 1.0.2
+2023-03-14 16:32:35,258:INFO:                pyod: 1.0.7
+2023-03-14 16:32:35,258:INFO:            imblearn: 0.10.1
+2023-03-14 16:32:35,258:INFO:   category_encoders: 2.6.0
+2023-03-14 16:32:35,259:INFO:            lightgbm: 3.3.5
+2023-03-14 16:32:35,259:INFO:               numba: 0.55.1
+2023-03-14 16:32:35,259:INFO:            requests: 2.28.1
+2023-03-14 16:32:35,259:INFO:          matplotlib: 3.5.2
+2023-03-14 16:32:35,259:INFO:          scikitplot: 0.3.7
+2023-03-14 16:32:35,259:INFO:         yellowbrick: 1.5
+2023-03-14 16:32:35,259:INFO:              plotly: 5.9.0
+2023-03-14 16:32:35,259:INFO:             kaleido: 0.2.1
+2023-03-14 16:32:35,259:INFO:         statsmodels: 0.13.2
+2023-03-14 16:32:35,259:INFO:              sktime: 0.16.1
+2023-03-14 16:32:35,259:INFO:               tbats: 1.1.2
+2023-03-14 16:32:35,259:INFO:            pmdarima: 2.0.2
+2023-03-14 16:32:35,259:INFO:              psutil: 5.9.0
+2023-03-14 16:32:35,260:INFO:PyCaret optional dependencies:
+2023-03-14 16:32:35,260:INFO:                shap: Not installed
+2023-03-14 16:32:35,260:INFO:           interpret: Not installed
+2023-03-14 16:32:35,260:INFO:                umap: Not installed
+2023-03-14 16:32:35,260:INFO:    pandas_profiling: Not installed
+2023-03-14 16:32:35,260:INFO:  explainerdashboard: Not installed
+2023-03-14 16:32:35,260:INFO:             autoviz: Not installed
+2023-03-14 16:32:35,261:INFO:           fairlearn: Not installed
+2023-03-14 16:32:35,261:INFO:             xgboost: 1.7.3
+2023-03-14 16:32:35,261:INFO:            catboost: Not installed
+2023-03-14 16:32:35,261:INFO:              kmodes: 0.12.2
+2023-03-14 16:32:35,261:INFO:             mlxtend: Not installed
+2023-03-14 16:32:35,261:INFO:       statsforecast: Not installed
+2023-03-14 16:32:35,261:INFO:        tune_sklearn: Not installed
+2023-03-14 16:32:35,261:INFO:                 ray: Not installed
+2023-03-14 16:32:35,261:INFO:            hyperopt: Not installed
+2023-03-14 16:32:35,262:INFO:              optuna: Not installed
+2023-03-14 16:32:35,262:INFO:               skopt: Not installed
+2023-03-14 16:32:35,262:INFO:              mlflow: Not installed
+2023-03-14 16:32:35,262:INFO:              gradio: Not installed
+2023-03-14 16:32:35,262:INFO:             fastapi: Not installed
+2023-03-14 16:32:35,262:INFO:             uvicorn: Not installed
+2023-03-14 16:32:35,262:INFO:              m2cgen: Not installed
+2023-03-14 16:32:35,262:INFO:           evidently: Not installed
+2023-03-14 16:32:35,262:INFO:               fugue: Not installed
+2023-03-14 16:32:35,262:INFO:           streamlit: Not installed
+2023-03-14 16:32:35,262:INFO:             prophet: Not installed
+2023-03-14 16:32:35,262:INFO:None
+2023-03-14 16:32:35,262:INFO:Set up data.
+2023-03-14 16:32:35,297:INFO:Set up train/test split.
+2023-03-14 16:32:35,369:INFO:Set up index.
+2023-03-14 16:32:35,372:INFO:Set up folding strategy.
+2023-03-14 16:32:35,373:INFO:Assigning column types.
+2023-03-14 16:32:35,393:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2023-03-14 16:32:35,491:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-03-14 16:32:35,493:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-03-14 16:32:35,555:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:35,561:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:35,653:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-03-14 16:32:35,655:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-03-14 16:32:35,721:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:35,727:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:35,728:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2023-03-14 16:32:35,825:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-03-14 16:32:35,895:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:35,897:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:36,014:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-03-14 16:32:36,090:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:36,097:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:36,098:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2023-03-14 16:32:36,352:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:36,364:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:36,703:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:36,713:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:36,723:INFO:Preparing preprocessing pipeline...
+2023-03-14 16:32:36,745:INFO:Set up simple imputation.
+2023-03-14 16:32:36,949:INFO:Finished creating preprocessing pipeline.
+2023-03-14 16:32:36,964:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\oabas\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['age', 'gender', 'height',
+                                             'weight', 'ap_hi', 'ap_lo',
+                                             'cholesterol', 'gluc', 'smoke',
+                                             'alco', 'active', 'BMI'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              missing_values=nan,
+                                                              strategy='mean',
+                                                              verbose=0))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent',
+                                                              verbose=0)))],
+         verbose=False)
+2023-03-14 16:32:36,965:INFO:Creating final display dataframe.
+2023-03-14 16:32:37,922:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target            cardio
+2                   Target type            Binary
+3           Original data shape       (70000, 13)
+4        Transformed data shape       (70000, 13)
+5   Transformed train set shape       (49000, 13)
+6    Transformed test set shape       (21000, 13)
+7              Numeric features                12
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                -1
+15                      Use GPU             False
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              5763
+2023-03-14 16:32:38,245:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:38,258:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:38,498:INFO:Soft dependency imported: xgboost: 1.7.3
+2023-03-14 16:32:38,504:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-03-14 16:32:38,506:INFO:setup() successfully completed in 3.25s...............
+2023-03-14 16:32:38,538:INFO:Initializing compare_models()
+2023-03-14 16:32:38,538:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, include=None, fold=None, round=4, cross_validation=True, sort=precision, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'precision', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2023-03-14 16:32:38,539:INFO:Checking exceptions
+2023-03-14 16:32:38,567:INFO:Preparing display monitor
+2023-03-14 16:32:38,705:INFO:Initializing Logistic Regression
+2023-03-14 16:32:38,705:INFO:Total runtime is 1.6486644744873048e-05 minutes
+2023-03-14 16:32:38,721:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:32:38,722:INFO:Initializing create_model()
+2023-03-14 16:32:38,722:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:32:38,723:INFO:Checking exceptions
+2023-03-14 16:32:38,723:INFO:Importing libraries
+2023-03-14 16:32:38,723:INFO:Copying training dataset
+2023-03-14 16:32:38,780:INFO:Defining folds
+2023-03-14 16:32:38,780:INFO:Declaring metric variables
+2023-03-14 16:32:38,792:INFO:Importing untrained model
+2023-03-14 16:32:38,804:INFO:Logistic Regression Imported successfully
+2023-03-14 16:32:38,830:INFO:Starting cross validation
+2023-03-14 16:32:38,834:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:33:13,224:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-03-14 16:33:13,224:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-03-14 16:33:13,224:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-03-14 16:33:13,236:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-03-14 16:33:13,244:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-03-14 16:33:13,529:INFO:Calculating mean and std
+2023-03-14 16:33:13,534:INFO:Creating metrics dataframe
+2023-03-14 16:33:13,548:INFO:Uploading results into container
+2023-03-14 16:33:13,548:INFO:Uploading model into container now
+2023-03-14 16:33:13,548:INFO:_master_model_container: 1
+2023-03-14 16:33:13,548:INFO:_display_container: 2
+2023-03-14 16:33:13,548:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=8536, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2023-03-14 16:33:13,548:INFO:create_model() successfully completed......................................
+2023-03-14 16:33:13,815:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:33:13,815:INFO:Creating metrics dataframe
+2023-03-14 16:33:13,834:INFO:Initializing K Neighbors Classifier
+2023-03-14 16:33:13,834:INFO:Total runtime is 0.5855002204577128 minutes
+2023-03-14 16:33:13,849:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:33:13,850:INFO:Initializing create_model()
+2023-03-14 16:33:13,850:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:33:13,851:INFO:Checking exceptions
+2023-03-14 16:33:13,851:INFO:Importing libraries
+2023-03-14 16:33:13,851:INFO:Copying training dataset
+2023-03-14 16:33:13,884:INFO:Defining folds
+2023-03-14 16:33:13,885:INFO:Declaring metric variables
+2023-03-14 16:33:13,895:INFO:Importing untrained model
+2023-03-14 16:33:13,907:INFO:K Neighbors Classifier Imported successfully
+2023-03-14 16:33:13,925:INFO:Starting cross validation
+2023-03-14 16:33:13,926:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:33:16,759:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:16,897:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.78s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:33:16,910:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.63s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:33:17,060:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:17,060:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:17,361:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:17,399:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.57s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:33:18,015:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:18,271:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:18,299:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:18,923:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:20,649:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.84s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-03-14 16:33:22,612:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:22,829:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:33:23,725:INFO:Calculating mean and std
+2023-03-14 16:33:23,731:INFO:Creating metrics dataframe
+2023-03-14 16:33:23,741:INFO:Uploading results into container
+2023-03-14 16:33:23,743:INFO:Uploading model into container now
+2023-03-14 16:33:23,745:INFO:_master_model_container: 2
+2023-03-14 16:33:23,745:INFO:_display_container: 2
+2023-03-14 16:33:23,746:INFO:KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+                     weights='uniform')
+2023-03-14 16:33:23,747:INFO:create_model() successfully completed......................................
+2023-03-14 16:33:23,996:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:33:23,996:INFO:Creating metrics dataframe
+2023-03-14 16:33:24,030:INFO:Initializing Naive Bayes
+2023-03-14 16:33:24,030:INFO:Total runtime is 0.7554295857747395 minutes
+2023-03-14 16:33:24,048:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:33:24,048:INFO:Initializing create_model()
+2023-03-14 16:33:24,048:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:33:24,048:INFO:Checking exceptions
+2023-03-14 16:33:24,048:INFO:Importing libraries
+2023-03-14 16:33:24,048:INFO:Copying training dataset
+2023-03-14 16:33:24,118:INFO:Defining folds
+2023-03-14 16:33:24,119:INFO:Declaring metric variables
+2023-03-14 16:33:24,130:INFO:Importing untrained model
+2023-03-14 16:33:24,147:INFO:Naive Bayes Imported successfully
+2023-03-14 16:33:24,167:INFO:Starting cross validation
+2023-03-14 16:33:24,175:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:33:25,568:INFO:Calculating mean and std
+2023-03-14 16:33:25,573:INFO:Creating metrics dataframe
+2023-03-14 16:33:25,585:INFO:Uploading results into container
+2023-03-14 16:33:25,586:INFO:Uploading model into container now
+2023-03-14 16:33:25,588:INFO:_master_model_container: 3
+2023-03-14 16:33:25,588:INFO:_display_container: 2
+2023-03-14 16:33:25,589:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2023-03-14 16:33:25,590:INFO:create_model() successfully completed......................................
+2023-03-14 16:33:25,741:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:33:25,741:INFO:Creating metrics dataframe
+2023-03-14 16:33:25,769:INFO:Initializing Decision Tree Classifier
+2023-03-14 16:33:25,769:INFO:Total runtime is 0.7844115734100341 minutes
+2023-03-14 16:33:25,779:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:33:25,780:INFO:Initializing create_model()
+2023-03-14 16:33:25,781:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:33:25,781:INFO:Checking exceptions
+2023-03-14 16:33:25,781:INFO:Importing libraries
+2023-03-14 16:33:25,782:INFO:Copying training dataset
+2023-03-14 16:33:25,832:INFO:Defining folds
+2023-03-14 16:33:25,833:INFO:Declaring metric variables
+2023-03-14 16:33:25,840:INFO:Importing untrained model
+2023-03-14 16:33:25,851:INFO:Decision Tree Classifier Imported successfully
+2023-03-14 16:33:25,869:INFO:Starting cross validation
+2023-03-14 16:33:25,872:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:33:28,745:INFO:Calculating mean and std
+2023-03-14 16:33:28,755:INFO:Creating metrics dataframe
+2023-03-14 16:33:28,773:INFO:Uploading results into container
+2023-03-14 16:33:28,776:INFO:Uploading model into container now
+2023-03-14 16:33:28,778:INFO:_master_model_container: 4
+2023-03-14 16:33:28,778:INFO:_display_container: 2
+2023-03-14 16:33:28,780:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       random_state=8536, splitter='best')
+2023-03-14 16:33:28,780:INFO:create_model() successfully completed......................................
+2023-03-14 16:33:28,965:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:33:28,965:INFO:Creating metrics dataframe
+2023-03-14 16:33:29,005:INFO:Initializing SVM - Linear Kernel
+2023-03-14 16:33:29,005:INFO:Total runtime is 0.8383426149686176 minutes
+2023-03-14 16:33:29,019:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:33:29,021:INFO:Initializing create_model()
+2023-03-14 16:33:29,022:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:33:29,022:INFO:Checking exceptions
+2023-03-14 16:33:29,022:INFO:Importing libraries
+2023-03-14 16:33:29,023:INFO:Copying training dataset
+2023-03-14 16:33:29,089:INFO:Defining folds
+2023-03-14 16:33:29,089:INFO:Declaring metric variables
+2023-03-14 16:33:29,106:INFO:Importing untrained model
+2023-03-14 16:33:29,119:INFO:SVM - Linear Kernel Imported successfully
+2023-03-14 16:33:29,149:INFO:Starting cross validation
+2023-03-14 16:33:29,152:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:33:33,145:INFO:Calculating mean and std
+2023-03-14 16:33:33,145:INFO:Creating metrics dataframe
+2023-03-14 16:33:33,161:INFO:Uploading results into container
+2023-03-14 16:33:33,163:INFO:Uploading model into container now
+2023-03-14 16:33:33,164:INFO:_master_model_container: 5
+2023-03-14 16:33:33,164:INFO:_display_container: 2
+2023-03-14 16:33:33,166:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=8536, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2023-03-14 16:33:33,168:INFO:create_model() successfully completed......................................
+2023-03-14 16:33:33,305:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:33:33,305:INFO:Creating metrics dataframe
+2023-03-14 16:33:33,325:INFO:Initializing Ridge Classifier
+2023-03-14 16:33:33,325:INFO:Total runtime is 0.9103473027547199 minutes
+2023-03-14 16:33:33,338:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:33:33,338:INFO:Initializing create_model()
+2023-03-14 16:33:33,339:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:33:33,339:INFO:Checking exceptions
+2023-03-14 16:33:33,339:INFO:Importing libraries
+2023-03-14 16:33:33,339:INFO:Copying training dataset
+2023-03-14 16:33:33,393:INFO:Defining folds
+2023-03-14 16:33:33,393:INFO:Declaring metric variables
+2023-03-14 16:33:33,403:INFO:Importing untrained model
+2023-03-14 16:33:33,411:INFO:Ridge Classifier Imported successfully
+2023-03-14 16:33:33,430:INFO:Starting cross validation
+2023-03-14 16:33:33,432:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:33:34,895:INFO:Calculating mean and std
+2023-03-14 16:33:34,895:INFO:Creating metrics dataframe
+2023-03-14 16:33:34,915:INFO:Uploading results into container
+2023-03-14 16:33:34,915:INFO:Uploading model into container now
+2023-03-14 16:33:34,915:INFO:_master_model_container: 6
+2023-03-14 16:33:34,915:INFO:_display_container: 2
+2023-03-14 16:33:34,923:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, normalize='deprecated', positive=False,
+                random_state=8536, solver='auto', tol=0.001)
+2023-03-14 16:33:34,925:INFO:create_model() successfully completed......................................
+2023-03-14 16:33:35,125:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:33:35,125:INFO:Creating metrics dataframe
+2023-03-14 16:33:35,155:INFO:Initializing Random Forest Classifier
+2023-03-14 16:33:35,155:INFO:Total runtime is 0.9408507227897642 minutes
+2023-03-14 16:33:35,174:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:33:35,176:INFO:Initializing create_model()
+2023-03-14 16:33:35,176:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:33:35,177:INFO:Checking exceptions
+2023-03-14 16:33:35,177:INFO:Importing libraries
+2023-03-14 16:33:35,178:INFO:Copying training dataset
+2023-03-14 16:33:35,232:INFO:Defining folds
+2023-03-14 16:33:35,233:INFO:Declaring metric variables
+2023-03-14 16:33:35,244:INFO:Importing untrained model
+2023-03-14 16:33:35,259:INFO:Random Forest Classifier Imported successfully
+2023-03-14 16:33:35,279:INFO:Starting cross validation
+2023-03-14 16:33:35,282:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:34:21,540:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 2.46s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:22,827:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.82s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:22,842:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.65s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:23,240:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.54s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:23,797:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.21s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:24,645:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.18s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:24,727:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.17s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:25,029:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.35s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:27,786:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 5.07s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:34:28,517:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 3.54s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:34:28,934:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.77s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:34:29,567:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 3.36s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:34:29,582:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.83s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:34:30,024:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.92s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:34:30,242:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 1.10s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:34:30,294:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 1.04s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:34:38,787:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.57s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:40,172:INFO:Calculating mean and std
+2023-03-14 16:34:40,252:INFO:Creating metrics dataframe
+2023-03-14 16:34:40,332:INFO:Uploading results into container
+2023-03-14 16:34:40,337:INFO:Uploading model into container now
+2023-03-14 16:34:40,351:INFO:_master_model_container: 7
+2023-03-14 16:34:40,351:INFO:_display_container: 2
+2023-03-14 16:34:40,367:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=8536, verbose=0, warm_start=False)
+2023-03-14 16:34:40,367:INFO:create_model() successfully completed......................................
+2023-03-14 16:34:41,157:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:34:41,157:INFO:Creating metrics dataframe
+2023-03-14 16:34:41,201:INFO:Initializing Quadratic Discriminant Analysis
+2023-03-14 16:34:41,201:INFO:Total runtime is 2.041608202457428 minutes
+2023-03-14 16:34:41,209:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:34:41,210:INFO:Initializing create_model()
+2023-03-14 16:34:41,210:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:34:41,210:INFO:Checking exceptions
+2023-03-14 16:34:41,211:INFO:Importing libraries
+2023-03-14 16:34:41,211:INFO:Copying training dataset
+2023-03-14 16:34:41,270:INFO:Defining folds
+2023-03-14 16:34:41,270:INFO:Declaring metric variables
+2023-03-14 16:34:41,278:INFO:Importing untrained model
+2023-03-14 16:34:41,288:INFO:Quadratic Discriminant Analysis Imported successfully
+2023-03-14 16:34:41,311:INFO:Starting cross validation
+2023-03-14 16:34:41,314:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:34:42,927:INFO:Calculating mean and std
+2023-03-14 16:34:42,937:INFO:Creating metrics dataframe
+2023-03-14 16:34:42,958:INFO:Uploading results into container
+2023-03-14 16:34:42,960:INFO:Uploading model into container now
+2023-03-14 16:34:42,962:INFO:_master_model_container: 8
+2023-03-14 16:34:42,963:INFO:_display_container: 2
+2023-03-14 16:34:42,964:INFO:QuadraticDiscriminantAnalysis(priors=None, reg_param=0.0,
+                              store_covariance=False, tol=0.0001)
+2023-03-14 16:34:42,964:INFO:create_model() successfully completed......................................
+2023-03-14 16:34:43,176:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:34:43,177:INFO:Creating metrics dataframe
+2023-03-14 16:34:43,235:INFO:Initializing Ada Boost Classifier
+2023-03-14 16:34:43,236:INFO:Total runtime is 2.0755199154218036 minutes
+2023-03-14 16:34:43,254:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:34:43,256:INFO:Initializing create_model()
+2023-03-14 16:34:43,257:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:34:43,258:INFO:Checking exceptions
+2023-03-14 16:34:43,258:INFO:Importing libraries
+2023-03-14 16:34:43,259:INFO:Copying training dataset
+2023-03-14 16:34:43,349:INFO:Defining folds
+2023-03-14 16:34:43,349:INFO:Declaring metric variables
+2023-03-14 16:34:43,368:INFO:Importing untrained model
+2023-03-14 16:34:43,387:INFO:Ada Boost Classifier Imported successfully
+2023-03-14 16:34:43,426:INFO:Starting cross validation
+2023-03-14 16:34:43,430:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:34:50,133:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.50s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:34:56,347:INFO:Calculating mean and std
+2023-03-14 16:34:56,347:INFO:Creating metrics dataframe
+2023-03-14 16:34:56,363:INFO:Uploading results into container
+2023-03-14 16:34:56,363:INFO:Uploading model into container now
+2023-03-14 16:34:56,363:INFO:_master_model_container: 9
+2023-03-14 16:34:56,363:INFO:_display_container: 2
+2023-03-14 16:34:56,368:INFO:AdaBoostClassifier(algorithm='SAMME.R', base_estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=8536)
+2023-03-14 16:34:56,368:INFO:create_model() successfully completed......................................
+2023-03-14 16:34:56,516:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:34:56,516:INFO:Creating metrics dataframe
+2023-03-14 16:34:56,555:INFO:Initializing Gradient Boosting Classifier
+2023-03-14 16:34:56,555:INFO:Total runtime is 2.297503411769867 minutes
+2023-03-14 16:34:56,565:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:34:56,566:INFO:Initializing create_model()
+2023-03-14 16:34:56,566:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:34:56,566:INFO:Checking exceptions
+2023-03-14 16:34:56,568:INFO:Importing libraries
+2023-03-14 16:34:56,568:INFO:Copying training dataset
+2023-03-14 16:34:56,618:INFO:Defining folds
+2023-03-14 16:34:56,618:INFO:Declaring metric variables
+2023-03-14 16:34:56,633:INFO:Importing untrained model
+2023-03-14 16:34:56,644:INFO:Gradient Boosting Classifier Imported successfully
+2023-03-14 16:34:56,670:INFO:Starting cross validation
+2023-03-14 16:34:56,673:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:35:15,933:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.60s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:35:16,081:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.72s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:35:16,613:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.66s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:35:16,683:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.66s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:35:16,763:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.54s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:35:17,348:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.65s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:35:17,738:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.53s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:35:26,290:INFO:Calculating mean and std
+2023-03-14 16:35:26,294:INFO:Creating metrics dataframe
+2023-03-14 16:35:26,302:INFO:Uploading results into container
+2023-03-14 16:35:26,304:INFO:Uploading model into container now
+2023-03-14 16:35:26,305:INFO:_master_model_container: 10
+2023-03-14 16:35:26,305:INFO:_display_container: 2
+2023-03-14 16:35:26,306:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='deviance', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=8536, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2023-03-14 16:35:26,306:INFO:create_model() successfully completed......................................
+2023-03-14 16:35:26,429:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:35:26,429:INFO:Creating metrics dataframe
+2023-03-14 16:35:26,463:INFO:Initializing Linear Discriminant Analysis
+2023-03-14 16:35:26,464:INFO:Total runtime is 2.7959896326065063 minutes
+2023-03-14 16:35:26,472:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:35:26,473:INFO:Initializing create_model()
+2023-03-14 16:35:26,473:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=lda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:35:26,473:INFO:Checking exceptions
+2023-03-14 16:35:26,473:INFO:Importing libraries
+2023-03-14 16:35:26,473:INFO:Copying training dataset
+2023-03-14 16:35:26,517:INFO:Defining folds
+2023-03-14 16:35:26,518:INFO:Declaring metric variables
+2023-03-14 16:35:26,528:INFO:Importing untrained model
+2023-03-14 16:35:26,537:INFO:Linear Discriminant Analysis Imported successfully
+2023-03-14 16:35:26,557:INFO:Starting cross validation
+2023-03-14 16:35:26,559:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:35:28,308:INFO:Calculating mean and std
+2023-03-14 16:35:28,308:INFO:Creating metrics dataframe
+2023-03-14 16:35:28,322:INFO:Uploading results into container
+2023-03-14 16:35:28,323:INFO:Uploading model into container now
+2023-03-14 16:35:28,324:INFO:_master_model_container: 11
+2023-03-14 16:35:28,325:INFO:_display_container: 2
+2023-03-14 16:35:28,325:INFO:LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001)
+2023-03-14 16:35:28,326:INFO:create_model() successfully completed......................................
+2023-03-14 16:35:28,458:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:35:28,458:INFO:Creating metrics dataframe
+2023-03-14 16:35:28,480:INFO:Initializing Extra Trees Classifier
+2023-03-14 16:35:28,480:INFO:Total runtime is 2.8295944054921467 minutes
+2023-03-14 16:35:28,489:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:35:28,489:INFO:Initializing create_model()
+2023-03-14 16:35:28,489:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=et, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:35:28,489:INFO:Checking exceptions
+2023-03-14 16:35:28,489:INFO:Importing libraries
+2023-03-14 16:35:28,489:INFO:Copying training dataset
+2023-03-14 16:35:28,539:INFO:Defining folds
+2023-03-14 16:35:28,539:INFO:Declaring metric variables
+2023-03-14 16:35:28,555:INFO:Importing untrained model
+2023-03-14 16:35:28,565:INFO:Extra Trees Classifier Imported successfully
+2023-03-14 16:35:28,586:INFO:Starting cross validation
+2023-03-14 16:35:28,587:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:37:07,475:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 3.29s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:09,701:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 3.09s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:11,906:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 3.83s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:12,221:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.78s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:37:13,833:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.51s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:37:14,644:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 4.34s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:16,327:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 5.00s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:16,791:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 5.56s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:17,571:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.60s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:37:17,571:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 9.38s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:18,181:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.52s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:37:18,916:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.83s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:37:19,821:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 7.53s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:20,631:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 1.17s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:37:23,512:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.75s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:37:27,892:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.68s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:29,332:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.91s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:37:31,564:INFO:Calculating mean and std
+2023-03-14 16:37:31,991:INFO:Creating metrics dataframe
+2023-03-14 16:37:32,168:INFO:Uploading results into container
+2023-03-14 16:37:32,181:INFO:Uploading model into container now
+2023-03-14 16:37:32,200:INFO:_master_model_container: 12
+2023-03-14 16:37:32,202:INFO:_display_container: 2
+2023-03-14 16:37:32,219:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     n_estimators=100, n_jobs=-1, oob_score=False,
+                     random_state=8536, verbose=0, warm_start=False)
+2023-03-14 16:37:32,220:INFO:create_model() successfully completed......................................
+2023-03-14 16:37:33,752:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:37:33,752:INFO:Creating metrics dataframe
+2023-03-14 16:37:33,854:INFO:Initializing Extreme Gradient Boosting
+2023-03-14 16:37:33,854:INFO:Total runtime is 4.919168603420257 minutes
+2023-03-14 16:37:33,868:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:37:33,870:INFO:Initializing create_model()
+2023-03-14 16:37:33,870:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:37:33,871:INFO:Checking exceptions
+2023-03-14 16:37:33,871:INFO:Importing libraries
+2023-03-14 16:37:33,872:INFO:Copying training dataset
+2023-03-14 16:37:33,947:INFO:Defining folds
+2023-03-14 16:37:33,947:INFO:Declaring metric variables
+2023-03-14 16:37:33,957:INFO:Importing untrained model
+2023-03-14 16:37:33,971:INFO:Extreme Gradient Boosting Imported successfully
+2023-03-14 16:37:33,994:INFO:Starting cross validation
+2023-03-14 16:37:33,996:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:37:59,823:INFO:Calculating mean and std
+2023-03-14 16:37:59,823:INFO:Creating metrics dataframe
+2023-03-14 16:37:59,832:INFO:Uploading results into container
+2023-03-14 16:37:59,835:INFO:Uploading model into container now
+2023-03-14 16:37:59,836:INFO:_master_model_container: 13
+2023-03-14 16:37:59,836:INFO:_display_container: 2
+2023-03-14 16:37:59,840:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=100, n_jobs=-1, num_parallel_tree=None,
+              objective='binary:logistic', predictor=None, ...)
+2023-03-14 16:37:59,840:INFO:create_model() successfully completed......................................
+2023-03-14 16:37:59,972:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:37:59,972:INFO:Creating metrics dataframe
+2023-03-14 16:38:00,010:INFO:Initializing Light Gradient Boosting Machine
+2023-03-14 16:38:00,011:INFO:Total runtime is 5.355110991001128 minutes
+2023-03-14 16:38:00,022:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:00,023:INFO:Initializing create_model()
+2023-03-14 16:38:00,023:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:00,023:INFO:Checking exceptions
+2023-03-14 16:38:00,023:INFO:Importing libraries
+2023-03-14 16:38:00,023:INFO:Copying training dataset
+2023-03-14 16:38:00,066:INFO:Defining folds
+2023-03-14 16:38:00,066:INFO:Declaring metric variables
+2023-03-14 16:38:00,077:INFO:Importing untrained model
+2023-03-14 16:38:00,091:INFO:Light Gradient Boosting Machine Imported successfully
+2023-03-14 16:38:00,113:INFO:Starting cross validation
+2023-03-14 16:38:00,121:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:11,714:INFO:Calculating mean and std
+2023-03-14 16:38:11,723:INFO:Creating metrics dataframe
+2023-03-14 16:38:11,738:INFO:Uploading results into container
+2023-03-14 16:38:11,740:INFO:Uploading model into container now
+2023-03-14 16:38:11,741:INFO:_master_model_container: 14
+2023-03-14 16:38:11,741:INFO:_display_container: 2
+2023-03-14 16:38:11,743:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=8536, reg_alpha=0.0, reg_lambda=0.0, silent='warn',
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0)
+2023-03-14 16:38:11,743:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:11,895:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:38:11,895:INFO:Creating metrics dataframe
+2023-03-14 16:38:11,946:INFO:Initializing Dummy Classifier
+2023-03-14 16:38:11,947:INFO:Total runtime is 5.554021787643432 minutes
+2023-03-14 16:38:11,953:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:11,953:INFO:Initializing create_model()
+2023-03-14 16:38:11,953:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=dummy, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC584CFA0>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:11,953:INFO:Checking exceptions
+2023-03-14 16:38:11,953:INFO:Importing libraries
+2023-03-14 16:38:11,953:INFO:Copying training dataset
+2023-03-14 16:38:12,016:INFO:Defining folds
+2023-03-14 16:38:12,017:INFO:Declaring metric variables
+2023-03-14 16:38:12,034:INFO:Importing untrained model
+2023-03-14 16:38:12,058:INFO:Dummy Classifier Imported successfully
+2023-03-14 16:38:12,088:INFO:Starting cross validation
+2023-03-14 16:38:12,091:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:12,643:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:12,703:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:12,818:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:12,898:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:12,928:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:13,029:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:13,045:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:13,158:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:13,208:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:13,238:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:38:13,258:INFO:Calculating mean and std
+2023-03-14 16:38:13,265:INFO:Creating metrics dataframe
+2023-03-14 16:38:13,279:INFO:Uploading results into container
+2023-03-14 16:38:13,281:INFO:Uploading model into container now
+2023-03-14 16:38:13,283:INFO:_master_model_container: 15
+2023-03-14 16:38:13,284:INFO:_display_container: 2
+2023-03-14 16:38:13,285:INFO:DummyClassifier(constant=None, random_state=8536, strategy='prior')
+2023-03-14 16:38:13,285:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:13,446:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:38:13,446:INFO:Creating metrics dataframe
+2023-03-14 16:38:13,542:INFO:Initializing create_model()
+2023-03-14 16:38:13,543:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDD7E51430>, estimator=AdaBoostClassifier(algorithm='SAMME.R', base_estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=8536), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:13,543:INFO:Checking exceptions
+2023-03-14 16:38:13,559:INFO:Importing libraries
+2023-03-14 16:38:13,560:INFO:Copying training dataset
+2023-03-14 16:38:13,616:INFO:Defining folds
+2023-03-14 16:38:13,617:INFO:Declaring metric variables
+2023-03-14 16:38:13,618:INFO:Importing untrained model
+2023-03-14 16:38:13,618:INFO:Declaring custom model
+2023-03-14 16:38:13,619:INFO:Ada Boost Classifier Imported successfully
+2023-03-14 16:38:13,623:INFO:Cross validation set to False
+2023-03-14 16:38:13,623:INFO:Fitting Model
+2023-03-14 16:38:16,075:INFO:AdaBoostClassifier(algorithm='SAMME.R', base_estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=8536)
+2023-03-14 16:38:16,075:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:16,346:INFO:_master_model_container: 15
+2023-03-14 16:38:16,347:INFO:_display_container: 2
+2023-03-14 16:38:16,347:INFO:AdaBoostClassifier(algorithm='SAMME.R', base_estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=8536)
+2023-03-14 16:38:16,348:INFO:compare_models() successfully completed......................................
+2023-03-14 16:38:16,494:INFO:Initializing compare_models()
+2023-03-14 16:38:16,494:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, include=None, fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Accuracy', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2023-03-14 16:38:16,494:INFO:Checking exceptions
+2023-03-14 16:38:16,557:INFO:Preparing display monitor
+2023-03-14 16:38:16,666:INFO:Initializing Logistic Regression
+2023-03-14 16:38:16,666:INFO:Total runtime is 0.0 minutes
+2023-03-14 16:38:16,677:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:16,677:INFO:Initializing create_model()
+2023-03-14 16:38:16,677:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:16,677:INFO:Checking exceptions
+2023-03-14 16:38:16,677:INFO:Importing libraries
+2023-03-14 16:38:16,677:INFO:Copying training dataset
+2023-03-14 16:38:16,728:INFO:Defining folds
+2023-03-14 16:38:16,728:INFO:Declaring metric variables
+2023-03-14 16:38:16,738:INFO:Importing untrained model
+2023-03-14 16:38:16,749:INFO:Logistic Regression Imported successfully
+2023-03-14 16:38:16,777:INFO:Starting cross validation
+2023-03-14 16:38:16,780:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:22,373:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.57s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:38:22,607:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.61s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:38:30,334:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-03-14 16:38:30,548:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-03-14 16:38:31,043:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-03-14 16:38:32,683:INFO:Calculating mean and std
+2023-03-14 16:38:32,683:INFO:Creating metrics dataframe
+2023-03-14 16:38:32,696:INFO:Uploading results into container
+2023-03-14 16:38:32,697:INFO:Uploading model into container now
+2023-03-14 16:38:32,698:INFO:_master_model_container: 1
+2023-03-14 16:38:32,698:INFO:_display_container: 2
+2023-03-14 16:38:32,699:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2023-03-14 16:38:32,700:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:32,864:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:38:32,864:INFO:Creating metrics dataframe
+2023-03-14 16:38:32,885:INFO:Initializing K Neighbors Classifier
+2023-03-14 16:38:32,885:INFO:Total runtime is 0.2703173597653707 minutes
+2023-03-14 16:38:32,899:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:32,900:INFO:Initializing create_model()
+2023-03-14 16:38:32,901:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:32,901:INFO:Checking exceptions
+2023-03-14 16:38:32,901:INFO:Importing libraries
+2023-03-14 16:38:32,901:INFO:Copying training dataset
+2023-03-14 16:38:32,950:INFO:Defining folds
+2023-03-14 16:38:32,954:INFO:Declaring metric variables
+2023-03-14 16:38:32,964:INFO:Importing untrained model
+2023-03-14 16:38:32,978:INFO:K Neighbors Classifier Imported successfully
+2023-03-14 16:38:33,001:INFO:Starting cross validation
+2023-03-14 16:38:33,004:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:35,046:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.51s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:38:35,143:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.53s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:38:35,230:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:35,288:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.57s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:38:35,524:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.63s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:38:35,834:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.71s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:38:35,869:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.63s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:38:36,216:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.90s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:38:36,268:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:36,354:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:37,364:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:37,364:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:38,173:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:38,268:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:306: UserWarning: Persisting input arguments took 0.54s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:38:39,267:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:40,324:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:306: UserWarning: Persisting input arguments took 0.94s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:38:40,514:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:41,240:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:306: UserWarning: Persisting input arguments took 0.77s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:38:43,435:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:43,894:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\neighbors\_classification.py:228: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+2023-03-14 16:38:45,669:INFO:Calculating mean and std
+2023-03-14 16:38:45,674:INFO:Creating metrics dataframe
+2023-03-14 16:38:45,694:INFO:Uploading results into container
+2023-03-14 16:38:45,696:INFO:Uploading model into container now
+2023-03-14 16:38:45,698:INFO:_master_model_container: 2
+2023-03-14 16:38:45,699:INFO:_display_container: 2
+2023-03-14 16:38:45,700:INFO:KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+                     weights='uniform')
+2023-03-14 16:38:45,701:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:45,904:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:38:45,904:INFO:Creating metrics dataframe
+2023-03-14 16:38:45,948:INFO:Initializing Naive Bayes
+2023-03-14 16:38:45,948:INFO:Total runtime is 0.4880403518676758 minutes
+2023-03-14 16:38:45,971:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:45,974:INFO:Initializing create_model()
+2023-03-14 16:38:45,974:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:45,975:INFO:Checking exceptions
+2023-03-14 16:38:45,975:INFO:Importing libraries
+2023-03-14 16:38:45,975:INFO:Copying training dataset
+2023-03-14 16:38:46,056:INFO:Defining folds
+2023-03-14 16:38:46,057:INFO:Declaring metric variables
+2023-03-14 16:38:46,074:INFO:Importing untrained model
+2023-03-14 16:38:46,089:INFO:Naive Bayes Imported successfully
+2023-03-14 16:38:46,121:INFO:Starting cross validation
+2023-03-14 16:38:46,124:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:47,480:INFO:Calculating mean and std
+2023-03-14 16:38:47,484:INFO:Creating metrics dataframe
+2023-03-14 16:38:47,494:INFO:Uploading results into container
+2023-03-14 16:38:47,496:INFO:Uploading model into container now
+2023-03-14 16:38:47,498:INFO:_master_model_container: 3
+2023-03-14 16:38:47,498:INFO:_display_container: 2
+2023-03-14 16:38:47,499:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2023-03-14 16:38:47,499:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:47,646:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:38:47,646:INFO:Creating metrics dataframe
+2023-03-14 16:38:47,688:INFO:Initializing Decision Tree Classifier
+2023-03-14 16:38:47,688:INFO:Total runtime is 0.5170295715332032 minutes
+2023-03-14 16:38:47,694:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:47,694:INFO:Initializing create_model()
+2023-03-14 16:38:47,694:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:47,694:INFO:Checking exceptions
+2023-03-14 16:38:47,694:INFO:Importing libraries
+2023-03-14 16:38:47,694:INFO:Copying training dataset
+2023-03-14 16:38:47,746:INFO:Defining folds
+2023-03-14 16:38:47,746:INFO:Declaring metric variables
+2023-03-14 16:38:47,756:INFO:Importing untrained model
+2023-03-14 16:38:47,765:INFO:Decision Tree Classifier Imported successfully
+2023-03-14 16:38:47,791:INFO:Starting cross validation
+2023-03-14 16:38:47,793:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:50,444:INFO:Calculating mean and std
+2023-03-14 16:38:50,444:INFO:Creating metrics dataframe
+2023-03-14 16:38:50,454:INFO:Uploading results into container
+2023-03-14 16:38:50,454:INFO:Uploading model into container now
+2023-03-14 16:38:50,454:INFO:_master_model_container: 4
+2023-03-14 16:38:50,454:INFO:_display_container: 2
+2023-03-14 16:38:50,454:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       random_state=123, splitter='best')
+2023-03-14 16:38:50,454:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:50,579:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:38:50,579:INFO:Creating metrics dataframe
+2023-03-14 16:38:50,604:INFO:Initializing SVM - Linear Kernel
+2023-03-14 16:38:50,604:INFO:Total runtime is 0.5656347354253134 minutes
+2023-03-14 16:38:50,616:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:50,616:INFO:Initializing create_model()
+2023-03-14 16:38:50,617:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:50,617:INFO:Checking exceptions
+2023-03-14 16:38:50,617:INFO:Importing libraries
+2023-03-14 16:38:50,617:INFO:Copying training dataset
+2023-03-14 16:38:50,668:INFO:Defining folds
+2023-03-14 16:38:50,669:INFO:Declaring metric variables
+2023-03-14 16:38:50,680:INFO:Importing untrained model
+2023-03-14 16:38:50,687:INFO:SVM - Linear Kernel Imported successfully
+2023-03-14 16:38:50,706:INFO:Starting cross validation
+2023-03-14 16:38:50,709:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:53,774:INFO:Calculating mean and std
+2023-03-14 16:38:53,774:INFO:Creating metrics dataframe
+2023-03-14 16:38:53,784:INFO:Uploading results into container
+2023-03-14 16:38:53,784:INFO:Uploading model into container now
+2023-03-14 16:38:53,784:INFO:_master_model_container: 5
+2023-03-14 16:38:53,784:INFO:_display_container: 2
+2023-03-14 16:38:53,784:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=123, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2023-03-14 16:38:53,784:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:53,914:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:38:53,914:INFO:Creating metrics dataframe
+2023-03-14 16:38:53,941:INFO:Initializing Ridge Classifier
+2023-03-14 16:38:53,942:INFO:Total runtime is 0.6212705969810487 minutes
+2023-03-14 16:38:53,951:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:53,952:INFO:Initializing create_model()
+2023-03-14 16:38:53,953:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:53,953:INFO:Checking exceptions
+2023-03-14 16:38:53,953:INFO:Importing libraries
+2023-03-14 16:38:53,953:INFO:Copying training dataset
+2023-03-14 16:38:53,989:INFO:Defining folds
+2023-03-14 16:38:53,989:INFO:Declaring metric variables
+2023-03-14 16:38:54,001:INFO:Importing untrained model
+2023-03-14 16:38:54,011:INFO:Ridge Classifier Imported successfully
+2023-03-14 16:38:54,030:INFO:Starting cross validation
+2023-03-14 16:38:54,032:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:54,939:INFO:Calculating mean and std
+2023-03-14 16:38:54,944:INFO:Creating metrics dataframe
+2023-03-14 16:38:54,954:INFO:Uploading results into container
+2023-03-14 16:38:54,956:INFO:Uploading model into container now
+2023-03-14 16:38:54,957:INFO:_master_model_container: 6
+2023-03-14 16:38:54,957:INFO:_display_container: 2
+2023-03-14 16:38:54,958:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, normalize='deprecated', positive=False,
+                random_state=123, solver='auto', tol=0.001)
+2023-03-14 16:38:54,958:INFO:create_model() successfully completed......................................
+2023-03-14 16:38:55,104:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:38:55,104:INFO:Creating metrics dataframe
+2023-03-14 16:38:55,142:INFO:Initializing Random Forest Classifier
+2023-03-14 16:38:55,144:INFO:Total runtime is 0.6413004159927369 minutes
+2023-03-14 16:38:55,153:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:38:55,154:INFO:Initializing create_model()
+2023-03-14 16:38:55,154:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:38:55,154:INFO:Checking exceptions
+2023-03-14 16:38:55,154:INFO:Importing libraries
+2023-03-14 16:38:55,154:INFO:Copying training dataset
+2023-03-14 16:38:55,194:INFO:Defining folds
+2023-03-14 16:38:55,194:INFO:Declaring metric variables
+2023-03-14 16:38:55,203:INFO:Importing untrained model
+2023-03-14 16:38:55,208:INFO:Random Forest Classifier Imported successfully
+2023-03-14 16:38:55,232:INFO:Starting cross validation
+2023-03-14 16:38:55,235:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:38:57,247:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:230: UserWarning: Persisting input arguments took 0.76s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, y = self._memory_transform(
+
+2023-03-14 16:39:22,788:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.60s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:24,531:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.65s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:27,375:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 1.40s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:39:37,678:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.64s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:40,306:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.81s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:41,766:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.75s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:41,790:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.73s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:42,156:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.94s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:42,850:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 1.68s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:43,776:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.59s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:39:43,916:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.59s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:44,642:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.66s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:39:45,136:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.89s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:39:45,781:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 3.17s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:39:46,406:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:306: UserWarning: Persisting input arguments took 0.80s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:39:47,059:INFO:Calculating mean and std
+2023-03-14 16:39:47,186:INFO:Creating metrics dataframe
+2023-03-14 16:39:47,309:INFO:Uploading results into container
+2023-03-14 16:39:47,316:INFO:Uploading model into container now
+2023-03-14 16:39:47,334:INFO:_master_model_container: 7
+2023-03-14 16:39:47,336:INFO:_display_container: 2
+2023-03-14 16:39:47,346:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2023-03-14 16:39:47,346:INFO:create_model() successfully completed......................................
+2023-03-14 16:39:48,676:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:39:48,676:INFO:Creating metrics dataframe
+2023-03-14 16:39:48,726:INFO:Initializing Quadratic Discriminant Analysis
+2023-03-14 16:39:48,728:INFO:Total runtime is 1.5343680540720621 minutes
+2023-03-14 16:39:48,736:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:39:48,736:INFO:Initializing create_model()
+2023-03-14 16:39:48,736:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:39:48,736:INFO:Checking exceptions
+2023-03-14 16:39:48,736:INFO:Importing libraries
+2023-03-14 16:39:48,736:INFO:Copying training dataset
+2023-03-14 16:39:48,825:INFO:Defining folds
+2023-03-14 16:39:48,825:INFO:Declaring metric variables
+2023-03-14 16:39:48,837:INFO:Importing untrained model
+2023-03-14 16:39:48,847:INFO:Quadratic Discriminant Analysis Imported successfully
+2023-03-14 16:39:48,865:INFO:Starting cross validation
+2023-03-14 16:39:48,869:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:39:50,396:INFO:Calculating mean and std
+2023-03-14 16:39:50,399:INFO:Creating metrics dataframe
+2023-03-14 16:39:50,416:INFO:Uploading results into container
+2023-03-14 16:39:50,416:INFO:Uploading model into container now
+2023-03-14 16:39:50,416:INFO:_master_model_container: 8
+2023-03-14 16:39:50,416:INFO:_display_container: 2
+2023-03-14 16:39:50,416:INFO:QuadraticDiscriminantAnalysis(priors=None, reg_param=0.0,
+                              store_covariance=False, tol=0.0001)
+2023-03-14 16:39:50,416:INFO:create_model() successfully completed......................................
+2023-03-14 16:39:50,576:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:39:50,576:INFO:Creating metrics dataframe
+2023-03-14 16:39:50,620:INFO:Initializing Ada Boost Classifier
+2023-03-14 16:39:50,621:INFO:Total runtime is 1.565924350420634 minutes
+2023-03-14 16:39:50,634:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:39:50,635:INFO:Initializing create_model()
+2023-03-14 16:39:50,636:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:39:50,636:INFO:Checking exceptions
+2023-03-14 16:39:50,636:INFO:Importing libraries
+2023-03-14 16:39:50,637:INFO:Copying training dataset
+2023-03-14 16:39:50,698:INFO:Defining folds
+2023-03-14 16:39:50,699:INFO:Declaring metric variables
+2023-03-14 16:39:50,711:INFO:Importing untrained model
+2023-03-14 16:39:50,720:INFO:Ada Boost Classifier Imported successfully
+2023-03-14 16:39:50,741:INFO:Starting cross validation
+2023-03-14 16:39:50,744:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:40:02,441:INFO:Calculating mean and std
+2023-03-14 16:40:02,446:INFO:Creating metrics dataframe
+2023-03-14 16:40:02,456:INFO:Uploading results into container
+2023-03-14 16:40:02,458:INFO:Uploading model into container now
+2023-03-14 16:40:02,460:INFO:_master_model_container: 9
+2023-03-14 16:40:02,460:INFO:_display_container: 2
+2023-03-14 16:40:02,461:INFO:AdaBoostClassifier(algorithm='SAMME.R', base_estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=123)
+2023-03-14 16:40:02,462:INFO:create_model() successfully completed......................................
+2023-03-14 16:40:02,629:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:40:02,629:INFO:Creating metrics dataframe
+2023-03-14 16:40:02,666:INFO:Initializing Gradient Boosting Classifier
+2023-03-14 16:40:02,666:INFO:Total runtime is 1.7666713794072468 minutes
+2023-03-14 16:40:02,681:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:40:02,682:INFO:Initializing create_model()
+2023-03-14 16:40:02,682:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:40:02,683:INFO:Checking exceptions
+2023-03-14 16:40:02,683:INFO:Importing libraries
+2023-03-14 16:40:02,683:INFO:Copying training dataset
+2023-03-14 16:40:02,749:INFO:Defining folds
+2023-03-14 16:40:02,749:INFO:Declaring metric variables
+2023-03-14 16:40:02,760:INFO:Importing untrained model
+2023-03-14 16:40:02,774:INFO:Gradient Boosting Classifier Imported successfully
+2023-03-14 16:40:02,796:INFO:Starting cross validation
+2023-03-14 16:40:02,796:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:40:23,887:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.57s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:40:25,910:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.52s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:40:26,703:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.51s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:40:27,093:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.55s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:40:35,587:INFO:Calculating mean and std
+2023-03-14 16:40:35,597:INFO:Creating metrics dataframe
+2023-03-14 16:40:35,607:INFO:Uploading results into container
+2023-03-14 16:40:35,609:INFO:Uploading model into container now
+2023-03-14 16:40:35,611:INFO:_master_model_container: 10
+2023-03-14 16:40:35,611:INFO:_display_container: 2
+2023-03-14 16:40:35,612:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='deviance', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2023-03-14 16:40:35,613:INFO:create_model() successfully completed......................................
+2023-03-14 16:40:35,747:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:40:35,747:INFO:Creating metrics dataframe
+2023-03-14 16:40:35,778:INFO:Initializing Linear Discriminant Analysis
+2023-03-14 16:40:35,778:INFO:Total runtime is 2.3185318032900493 minutes
+2023-03-14 16:40:35,787:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:40:35,787:INFO:Initializing create_model()
+2023-03-14 16:40:35,787:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=lda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:40:35,787:INFO:Checking exceptions
+2023-03-14 16:40:35,787:INFO:Importing libraries
+2023-03-14 16:40:35,787:INFO:Copying training dataset
+2023-03-14 16:40:35,842:INFO:Defining folds
+2023-03-14 16:40:35,842:INFO:Declaring metric variables
+2023-03-14 16:40:35,851:INFO:Importing untrained model
+2023-03-14 16:40:35,863:INFO:Linear Discriminant Analysis Imported successfully
+2023-03-14 16:40:35,879:INFO:Starting cross validation
+2023-03-14 16:40:35,881:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:40:37,727:INFO:Calculating mean and std
+2023-03-14 16:40:37,727:INFO:Creating metrics dataframe
+2023-03-14 16:40:37,742:INFO:Uploading results into container
+2023-03-14 16:40:37,742:INFO:Uploading model into container now
+2023-03-14 16:40:37,742:INFO:_master_model_container: 11
+2023-03-14 16:40:37,742:INFO:_display_container: 2
+2023-03-14 16:40:37,742:INFO:LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001)
+2023-03-14 16:40:37,747:INFO:create_model() successfully completed......................................
+2023-03-14 16:40:37,877:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:40:37,877:INFO:Creating metrics dataframe
+2023-03-14 16:40:37,907:INFO:Initializing Extra Trees Classifier
+2023-03-14 16:40:37,907:INFO:Total runtime is 2.3540183107058206 minutes
+2023-03-14 16:40:37,916:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:40:37,918:INFO:Initializing create_model()
+2023-03-14 16:40:37,919:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=et, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:40:37,919:INFO:Checking exceptions
+2023-03-14 16:40:37,919:INFO:Importing libraries
+2023-03-14 16:40:37,919:INFO:Copying training dataset
+2023-03-14 16:40:37,970:INFO:Defining folds
+2023-03-14 16:40:37,970:INFO:Declaring metric variables
+2023-03-14 16:40:37,982:INFO:Importing untrained model
+2023-03-14 16:40:37,991:INFO:Extra Trees Classifier Imported successfully
+2023-03-14 16:40:38,015:INFO:Starting cross validation
+2023-03-14 16:40:38,018:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:42:55,391:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 4.06s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:42:57,218:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.51s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:42:57,994:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 8.90s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:43:01,895:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:223: UserWarning: Persisting input arguments took 0.54s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_transformer = self._memory_fit(
+
+2023-03-14 16:43:10,532:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 15.74s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:43:12,182:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 16.11s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:43:12,572:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 16.57s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:43:16,021:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 2.45s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-03-14 16:43:16,602:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 21.10s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:43:17,552:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 1.48s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:43:18,628:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 22.20s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:43:19,245:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 23.17s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:43:19,752:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.73s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-03-14 16:43:21,172:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 1.21s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:43:23,376:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 0.68s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:43:24,022:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:295: UserWarning: Persisting input arguments took 1.34s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-03-14 16:43:31,222:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:252: UserWarning: Persisting input arguments took 0.58s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2023-03-14 16:43:32,256:INFO:Calculating mean and std
+2023-03-14 16:43:32,412:INFO:Creating metrics dataframe
+2023-03-14 16:43:32,544:INFO:Uploading results into container
+2023-03-14 16:43:32,552:INFO:Uploading model into container now
+2023-03-14 16:43:32,570:INFO:_master_model_container: 12
+2023-03-14 16:43:32,570:INFO:_display_container: 2
+2023-03-14 16:43:32,586:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     n_estimators=100, n_jobs=-1, oob_score=False,
+                     random_state=123, verbose=0, warm_start=False)
+2023-03-14 16:43:32,588:INFO:create_model() successfully completed......................................
+2023-03-14 16:43:33,982:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:43:33,982:INFO:Creating metrics dataframe
+2023-03-14 16:43:34,032:INFO:Initializing Extreme Gradient Boosting
+2023-03-14 16:43:34,033:INFO:Total runtime is 5.289454571406047 minutes
+2023-03-14 16:43:34,043:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:43:34,044:INFO:Initializing create_model()
+2023-03-14 16:43:34,044:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:43:34,044:INFO:Checking exceptions
+2023-03-14 16:43:34,045:INFO:Importing libraries
+2023-03-14 16:43:34,046:INFO:Copying training dataset
+2023-03-14 16:43:34,114:INFO:Defining folds
+2023-03-14 16:43:34,114:INFO:Declaring metric variables
+2023-03-14 16:43:34,122:INFO:Importing untrained model
+2023-03-14 16:43:34,132:INFO:Extreme Gradient Boosting Imported successfully
+2023-03-14 16:43:34,148:INFO:Starting cross validation
+2023-03-14 16:43:34,151:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:44:04,576:INFO:Calculating mean and std
+2023-03-14 16:44:04,579:INFO:Creating metrics dataframe
+2023-03-14 16:44:04,583:INFO:Uploading results into container
+2023-03-14 16:44:04,583:INFO:Uploading model into container now
+2023-03-14 16:44:04,583:INFO:_master_model_container: 13
+2023-03-14 16:44:04,583:INFO:_display_container: 2
+2023-03-14 16:44:04,583:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=100, n_jobs=-1, num_parallel_tree=None,
+              objective='binary:logistic', predictor=None, ...)
+2023-03-14 16:44:04,583:INFO:create_model() successfully completed......................................
+2023-03-14 16:44:04,723:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:44:04,723:INFO:Creating metrics dataframe
+2023-03-14 16:44:04,743:INFO:Initializing Light Gradient Boosting Machine
+2023-03-14 16:44:04,743:INFO:Total runtime is 5.801279095808665 minutes
+2023-03-14 16:44:04,757:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:44:04,758:INFO:Initializing create_model()
+2023-03-14 16:44:04,758:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:44:04,759:INFO:Checking exceptions
+2023-03-14 16:44:04,759:INFO:Importing libraries
+2023-03-14 16:44:04,759:INFO:Copying training dataset
+2023-03-14 16:44:04,803:INFO:Defining folds
+2023-03-14 16:44:04,803:INFO:Declaring metric variables
+2023-03-14 16:44:04,811:INFO:Importing untrained model
+2023-03-14 16:44:04,821:INFO:Light Gradient Boosting Machine Imported successfully
+2023-03-14 16:44:04,835:INFO:Starting cross validation
+2023-03-14 16:44:04,835:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:44:09,183:INFO:Calculating mean and std
+2023-03-14 16:44:09,193:INFO:Creating metrics dataframe
+2023-03-14 16:44:09,202:INFO:Uploading results into container
+2023-03-14 16:44:09,204:INFO:Uploading model into container now
+2023-03-14 16:44:09,205:INFO:_master_model_container: 14
+2023-03-14 16:44:09,205:INFO:_display_container: 2
+2023-03-14 16:44:09,206:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent='warn',
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0)
+2023-03-14 16:44:09,206:INFO:create_model() successfully completed......................................
+2023-03-14 16:44:09,353:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:44:09,353:INFO:Creating metrics dataframe
+2023-03-14 16:44:09,390:INFO:Initializing Dummy Classifier
+2023-03-14 16:44:09,390:INFO:Total runtime is 5.878739547729492 minutes
+2023-03-14 16:44:09,399:INFO:SubProcess create_model() called ==================================
+2023-03-14 16:44:09,400:INFO:Initializing create_model()
+2023-03-14 16:44:09,400:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=dummy, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FDC5D91370>, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:44:09,400:INFO:Checking exceptions
+2023-03-14 16:44:09,400:INFO:Importing libraries
+2023-03-14 16:44:09,401:INFO:Copying training dataset
+2023-03-14 16:44:09,443:INFO:Defining folds
+2023-03-14 16:44:09,443:INFO:Declaring metric variables
+2023-03-14 16:44:09,454:INFO:Importing untrained model
+2023-03-14 16:44:09,464:INFO:Dummy Classifier Imported successfully
+2023-03-14 16:44:09,482:INFO:Starting cross validation
+2023-03-14 16:44:09,484:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-03-14 16:44:09,938:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,053:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,105:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,188:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,208:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,293:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,328:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,416:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,463:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,519:WARNING:C:\Users\oabas\anaconda3\lib\site-packages\sklearn\metrics\_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-03-14 16:44:10,546:INFO:Calculating mean and std
+2023-03-14 16:44:10,553:INFO:Creating metrics dataframe
+2023-03-14 16:44:10,575:INFO:Uploading results into container
+2023-03-14 16:44:10,577:INFO:Uploading model into container now
+2023-03-14 16:44:10,579:INFO:_master_model_container: 15
+2023-03-14 16:44:10,579:INFO:_display_container: 2
+2023-03-14 16:44:10,580:INFO:DummyClassifier(constant=None, random_state=123, strategy='prior')
+2023-03-14 16:44:10,581:INFO:create_model() successfully completed......................................
+2023-03-14 16:44:10,823:INFO:SubProcess create_model() end ==================================
+2023-03-14 16:44:10,828:INFO:Creating metrics dataframe
+2023-03-14 16:44:10,913:INFO:Initializing create_model()
+2023-03-14 16:44:10,913:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FDC584C580>, estimator=GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='deviance', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2023-03-14 16:44:10,914:INFO:Checking exceptions
+2023-03-14 16:44:10,924:INFO:Importing libraries
+2023-03-14 16:44:10,925:INFO:Copying training dataset
+2023-03-14 16:44:10,982:INFO:Defining folds
+2023-03-14 16:44:10,982:INFO:Declaring metric variables
+2023-03-14 16:44:10,983:INFO:Importing untrained model
+2023-03-14 16:44:10,983:INFO:Declaring custom model
+2023-03-14 16:44:10,987:INFO:Gradient Boosting Classifier Imported successfully
+2023-03-14 16:44:10,989:INFO:Cross validation set to False
+2023-03-14 16:44:10,989:INFO:Fitting Model
+2023-03-14 16:44:17,744:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='deviance', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2023-03-14 16:44:17,744:INFO:create_model() successfully completed......................................
+2023-03-14 16:44:17,945:INFO:_master_model_container: 15
+2023-03-14 16:44:17,946:INFO:_display_container: 2
+2023-03-14 16:44:17,947:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='deviance', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2023-03-14 16:44:17,947:INFO:compare_models() successfully completed......................................
