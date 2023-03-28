@@ -1,44 +1,43 @@
 import pandas as pd
+import pickle
 from sklearn.preprocessing import LabelEncoder
 from kmodes.kmodes import KModes
 
-def generate_user_data():
-    # Ask user for input
-    age = int(input("What is your age? "))
-    weight = float(input("What is your weight in kg? "))
-    height = float(input("What is your height in cm? "))
-    systolic_bp = int(input("What is your systolic blood pressure (high BP in mmHg)? "))
-    diastolic_bp = int(input("What is your diastolic blood pressure (low BP in mmHg)? "))
-    gender = input("What is your gender (female/male)? ")
-    while gender.lower() not in ['female', 'male']:
-        gender = input("Invalid input. Please enter either 'female' or 'male': ")
-    gender = 1 if gender.lower() == 'female' else 0
-    cholesterol = int(input("What is your cholesterol level? Enter 1 for normal, 2 for above normal, or 3 for well above normal: "))
-    glucose = int(input("What is your glucose level? Enter 1 for normal, 2 for above normal, or 3 for well above normal: "))
-    physical_activity = int(input("Do you engage in physical activity? Enter 1 for yes or 0 for no: "))
-    smoking = int(input("Do you smoke? Enter 1 for yes or 0 for no: "))
-    alcohol = int(input("Do you consume alcohol? Enter 1 for yes or 0 for no: "))
+# Ask user for input
+age = int(input("What is your age? "))
+weight = float(input("What is your weight in kg? "))
+height = float(input("What is your height in cm? "))
+systolic_bp = int(input("What is your systolic blood pressure (high BP in mmHg)? "))
+diastolic_bp = int(input("What is your diastolic blood pressure (low BP in mmHg)? "))
+gender = input("What is your gender (female/male)? ")
+while gender.lower() not in ['female', 'male']:
+    gender = input("Invalid input. Please enter either 'female' or 'male': ")
+gender = 1 if gender.lower() == 'female' else 0
+cholesterol = int(input("What is your cholesterol level? Enter 1 for normal, 2 for above normal, or 3 for well above normal: "))
+glucose = int(input("What is your glucose level? Enter 1 for normal, 2 for above normal, or 3 for well above normal: "))
+physical_activity = int(input("Do you engage in physical activity? Enter 1 for yes or 0 for no: "))
+smoking = int(input("Do you smoke? Enter 1 for yes or 0 for no: "))
+alcohol = int(input("Do you consume alcohol? Enter 1 for yes or 0 for no: "))
     
-    # Transforming the user input
-    df_user = pd.DataFrame({
-        'age': [age],
-        'weight': [weight],
-        'height': [height],
-        'systolic': [systolic_bp],
-        'diastolic': [diastolic_bp],
-        'gender': [gender],
-        'cholesterol': [cholesterol],
-        'glucose': [glucose],
-        'physical_activity': [physical_activity],
-        'smoking': [smoking],
-        'alcohol': [alcohol]
-    })
-    
-    # Transforming the column AGE(measured in days) for Age_Bin
-    # age_bin in quinquenium 5 years spam
-    df_user['age_bin'] = pd.cut(df_user['age'], [0,20,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100], 
-                              labels=['0-20', '20-30', '30-35', '35-40','40-45','45-50','50-55','55-60','60-65','65-70','70-75'])
+# Transforming the user input
+df_user = pd.DataFrame({
+    'age': [age],
+    'weight': [weight],
+    'height': [height],
+    'systolic': [systolic_bp],
+    'diastolic': [diastolic_bp],
+    'gender': [gender],
+    'cholesterol': [cholesterol],
+    'glucose': [glucose],
+    'physical_activity': [physical_activity],
+    'smoking': [smoking],
+    'alcohol': [alcohol]
+})
 
+def transform_user_data(df_user):
+    # Transforming the column AGE(measured in days) for Age_Bin
+    df['age_bin'] = pd.cut(df['age'], [0,20,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100], 
+                              labels=['0-20', '20-30', '30-35', '35-40','40-45','45-50','50-55','55-60','60-65','65-70','70-75','75-80','80-85','85-90','90-95','95-100'])
     # Transforming the column bmi in Body Mass Index Classes (1 to 6)
     # Adding Body Mass Index
     df_user['bmi'] = df_user['weight']/((df_user['height']/100)**2)
@@ -85,7 +84,25 @@ def generate_user_data():
             map_values.append('Not_Rated')
 
     df_user['MAP_class'] = map_values
-    
-    return df_user
 
-generate_user_data()
+    df = df_user[["gender","age_bin","bmi_class","MAP_Class",
+                  "cholesterol","glucose","smoking","alcohol",
+                  "physical_activity"]]
+    le = LabelEncoder()
+    df = df.apply(le.fit_transform)
+    km_huang = KModes(n_clusters=2, init = "Huang", n_init = 5, verbose=0)
+    cluster = km_huang.fit_predict(df)
+
+    return df
+
+transform_user_data(df_user)
+
+# Load the trained model
+model = pickle.load(open('../Models/voting_classifier.pkl', 'rb'))
+
+# Make a prediction
+prediction = model.predict(df_user)[0]
+if prediction == 1:
+    print("You have a higher risk of having a cardiovascular disease.")
+else:
+    print("You have a lower risk of having a cardiovascular disease.")
