@@ -86,3 +86,6 @@ def generate_user_data():
 
     df_user['MAP_class'] = map_values
     
+    return df_user
+
+generate_user_data()
