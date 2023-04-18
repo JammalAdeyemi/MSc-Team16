@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from kmodes.kmodes import KModes
 
 # Load the existing data
-old_data = pd.read_csv('cardio_data1.csv')
+old_data = pd.read_csv('cardio_data1')
 
 # Ask user for input
 age = int(input("What is your age? "))
@@ -42,18 +42,18 @@ df_user = pd.DataFrame({
 new_data = pd.concat([old_data, df_user], ignore_index=True)
 
 # Write the new data to the CSV file
-new_data.to_csv('cardio_data1.csv', index=False)
+new_data.to_csv('cardio_data1', index=False)
 
-def transform_data(new_data):
+def transform_data(data):
     # Transforming the column AGE(measured in days) for Age_Bin
-    new_data['age_bin'] = pd.cut(new_data['age'], [0, 20, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
+    data['age_bin'] = pd.cut(data['age'], [0, 20, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
                                  labels=['0-20', '20-30', '30-35', '35-40', '40-45', '45-50', '50-55', '55-60', '60-65',
                                          '65-70', '70-75', '75-80', '80-85', '85-90', '90-95', '95-100'])
 
     # Transforming the column bmi in Body Mass Index Classes (1 to 6)
-    new_data['bmi'] = new_data['weight'] / ((new_data['height'] / 100) ** 2)
+    data['bmi'] = data['weight'] / ((data['height'] / 100) ** 2)
     rating = []
-    for row in new_data['bmi']:
+    for row in data['bmi']:
         if row < 18.5:
             rating.append(1)  # UnderWeight
         elif row >= 18.5 and row < 24.9:
@@ -70,12 +70,12 @@ def transform_data(new_data):
             rating.append('Error')  # Error
         else:
             rating.append('Not_Rated')  # Not_Rated
-    new_data['BMI_Class'] = rating
+    data['BMI_Class'] = rating
 
     # Transforming the column systolic in Systolic Blood Pressure Classes (1 to 6)
-    new_data['MAP'] = (new_data['systolic'] + 2 * new_data['diastolic']) / 3
+    data['MAP'] = (data['systolic'] + 2 * data['diastolic']) / 3
     map_values = []
-    for row in new_data['MAP']:
+    for row in data['MAP']:
         if row < 69.9:
             map_values.append(1)  # Low
         elif row >= 69.9 and row < 79.9:
@@ -92,41 +92,30 @@ def transform_data(new_data):
             map_values.append(7)  # Hypertensive_Emergency
         else:
             map_values.append('Not_Rated')
-    new_data['MAP_Class'] = map_values
+    data['MAP_Class'] = map_values
 
-    new_data = new_data[["gender", "age_bin", "BMI_Class", "MAP_Class", "cholesterol", "glucose", "smoke", "alcohol", "active"]]
+    new_data = data[["gender", "age_bin", "BMI_Class", "MAP_Class", "cholesterol", "glucose", "smoke", "alcohol", "active"]]
     le = LabelEncoder()
     new_data = new_data.apply(le.fit_transform)
-    # Splitting the dataset into male and female
-    df_male = new_data.query("gender == 0")
-    df_female = new_data.query("gender == 1")
     km_huang = KModes(n_clusters=2, init="Huang", n_init=5, verbose=0)
-    # female data
-    clusters_female = km_huang.fit_predict(df_female)
-    # male data
-    clusters_male = km_huang.fit_predict(df_male)
+    clusters = km_huang.fit_predict(new_data)
     # Inserting clusters in DataFrame
-    df_female.insert(0, "Cluster", clusters_female, True)
-    df_male.insert(0, "Cluster", clusters_male, True)
-    # replacing cluster column values to merge dataframes after
-    df_male["Cluster"].replace({0: 2, 1: 3}, inplace=True)
-    # merging female and male data
-    df_user = pd.concat([df_female, df_male], ignore_index=True, sort=False)
+    new_data.insert(0, "Cluster", clusters, True)
 
-    return df_user
-
+    return new_data
 
 # Load the trained model
 model = pickle.load(open('../Models/voting_classifier.pkl', 'rb'))
-new_data = transform_data(new_data)
+
+# Load the new data data
+df = pd.read_csv('cardio_data1.csv')
+
+new_data = transform_data(df)
+
 # Get the index of the new row
 new_row_index = new_data.index[-1]
 
-# # Transform the user data
-# df_transformed = transform_data(new_data.loc[[new_row_index], :])
-
 # Make a prediction
-prediction_prob = model.predict_proba(new_row_index)[0]
+prediction_prob = model.predict_proba(new_data.loc[[new_row_index], :])
 
-print("Your probability of having a cardiovascular disease is: {:.2f}%".format(prediction_prob[1] * 100))
-
+print("Your probability of having a cardiovascular disease is: {:.2f}%".format(prediction_prob[0][1] * 100))
